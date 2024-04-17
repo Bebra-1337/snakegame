@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 #include<conio.h>
+#include<ctime>
 #pragma warning(disable:4996)
 
 void run();
@@ -45,7 +46,7 @@ void run()
 		update();
 		clearScreen();
 		printMap();
-		_sleep(500);
+		_sleep(300);
 	}
 
 	std::cout << "\t\t!!!Game Over!" << std::endl << "\t\tYour score is: " << food;
@@ -94,6 +95,7 @@ void clearScreen()
 
 void generateFood()
 {
+	srand(time(NULL));
 	int x = 0;
 	int y = 0;
 	do {
